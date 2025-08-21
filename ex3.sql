@@ -47,10 +47,10 @@ FROM Products p JOIN [Order Details] o ON p.ProductID = o.ProductID
 GROUP BY p.ProductID, p.ProductName
 
 
-
+-- ต้องการรหัสสินค้า ชื่อสินค้า ที่ nancy ขายได้ทั้งหมดเรียงตามรหัสสินค้า
 SELECT distinct p.ProductID, p.ProductName
 from Employees e JOIN Orders o on e.EmployeeID = o.EmployeeID
                  JOIN [Order Details] od ON o.OrderID = od.OrderID
                  JOIN Products p ON p.ProductID = od.ProductID
-WHERE e.FirstName
+WHERE e.FirstName = 'Nancy'
 ORDER by ProductID
