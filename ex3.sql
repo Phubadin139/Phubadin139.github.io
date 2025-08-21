@@ -63,3 +63,20 @@ From Customers c JOIN Orders o on c.CustomerID = o.CustomerID
                  JOIN Suppliers s ON s.SupplierID = p.SupplierID
 WHERE c.CompanyName = 'Around the horn'
 
+
+-- บริษัทลูกค้า Around the born ซื้อสินค้าอะไรบ้าง จำนวนเท่าใด
+SELECT p.ProductID, p.ProductName, SUM(Quantity) จำนวนที่ซื้อ
+FROM Customers c JOIN Orders o on c.CustomerID = o.CustomerID
+                 JOIN [Order Details] od On o.OrderID = od.OrderID
+                 JOIN Products p ON p.ProductID = od.ProductID
+WHERE c.CompanyName = 'Around the horn'
+GROUP BY p.ProductID, p.ProductName
+
+--ต้องการหมายเลขใบสั่งซื้อ ชื่อพนักงาน และยอดขายในใบสั่งซื้อ
+SELECT o.OrderID, FirstName,
+        SUM(Quantity* od.UnitPrice * (1-Discount)) Totalcash
+FROM Orders o JOIN Employees e ON o.EmployeeID = e.EmployeeID
+              JOIN [Order Details] od ON o.OrderID = od.OrderID
+ GROUP BY o.OrderID, FirstName
+
+
