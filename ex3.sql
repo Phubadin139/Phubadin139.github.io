@@ -54,3 +54,12 @@ from Employees e JOIN Orders o on e.EmployeeID = o.EmployeeID
                  JOIN Products p ON p.ProductID = od.ProductID
 WHERE e.FirstName = 'Nancy'
 ORDER by ProductID
+
+-- ต้องการชื่อบริษัทลูกค้า Around the born ซื้อสินค้าที่มาจากประเทศอะไรบ้าง
+SELECT distinct s.Country
+From Customers c JOIN Orders o on c.CustomerID = o.CustomerID
+                 JOIN [Order Details] od On o.OrderID = od.OrderID
+                 JOIN Products p ON p.ProductID = od.ProductID
+                 JOIN Suppliers s ON s.SupplierID = p.SupplierID
+WHERE c.CompanyName = 'Around the horn'
+
