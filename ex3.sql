@@ -35,15 +35,22 @@ SELECT e.EmployeeID, FirstName, o.OrderID
 from  Employees e JOIN Orders o on e.EmployeeID = o.EmployeeID
 ORDER by EmployeeID
 
---จงแสดงหมายเลขใบสั่งซื้อ, ชื่อบริษัทลูกค้า, สถานที่ส่งของ, และพนักงานผู้ดูแล
-SELECT O.OrderID เลขใบสั่งซื้อ, C.CompanyName ลูกค้า, E.FirstName พนักงาน, O.ShipAddress ส่งไปที่
-FROM Orders O
-join Customers C on O.CustomerID=C.CustomerID
-join Employees E on O.EmployeeID=E.EmployeeID
+--ต้องการชื่อบริษัทส่งของ และจำนวนใบสั่งซื้อที่ถูกต้อง
+SELECT s.CompanyName, COUNT(*) จำนวนorder
+From Shippers s JOIN Orders o on s.ShipperID = o.ShipVia
+GROUP by s.CompanyName
+ORDER BY 2 DESC
+
+--ต้องการรหัสสินค้า ชื่อสินค้า และจำนวนทั้งหมดที่ขายได้
+SELECT p.ProductID , p.ProductName, SUM(Quantity) จำนวนที่ขายได้
+FROM Products p JOIN [Order Details] o ON p.ProductID = o.ProductID
+GROUP BY p.ProductID, p.ProductName
 
 
-select e.EmployeeID, FirstName , count(*) as [จ านวน order]
-, sum(freight) as [Sum of Freight]
-from Employees e join Orders o on e.EmployeeID = o.EmployeeID
-where year(orderdate) = 1998
-group by e.EmployeeID, FirstName
+
+SELECT distinct p.ProductID, p.ProductName
+from Employees e JOIN Orders o on e.EmployeeID = o.EmployeeID
+                 JOIN [Order Details] od ON o.OrderID = od.OrderID
+                 JOIN Products p ON p.ProductID = od.ProductID
+WHERE e.FirstName
+ORDER by ProductID
