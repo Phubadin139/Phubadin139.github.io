@@ -1,126 +1,157 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าแรก GitHub.io ของนักศึกษา</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: "Sarabun", sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio นักศึกษา</title>
+  <style>
+    body {
+      font-family: "Sarabun", sans-serif;
+      background-color: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
 
-        h1, h2, h3 {
-            color: #fff;
-        }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-        a {
-            color: #aaa;
-            text-decoration: none;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .container {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 20px;
+    }
 
-        .section {
-            border-bottom: 1px solid #444;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-        }
+    section {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fafafa;
+      transition: all 0.3s ease;
+    }
 
-        .red {
-            color: #ff4040;
-        }
+    section:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-3px);
+    }
 
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
-        }
+    h2 {
+      border-left: 6px solid #000;
+      padding-left: 10px;
+      color: #000;
+      font-size: 1.4em;
+      margin-top: 0;
+    }
 
-        .contact a {
-            color: #ccc;
-        }
+    ul {
+      list-style-type: "▸ ";
+      padding-left: 20px;
+    }
 
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 14px;
-            color: #777;
-        }
-    </style>
+    a {
+      color: #000;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
+  <header>
     <h1>หน้าแรก GitHub.io ของนักศึกษา</h1>
+    <p>My Portfolio & Projects</p>
+  </header>
 
-    <div class="section">
-        <h2 class="red">1. ส่วนแนะนำตัว (Introduction / Profile)</h2>
-        <ul>
-            <li>ชื่อ-นามสกุล: นายสมชาย ตัวอย่าง (Somchai Tayang)</li>
-            <li>นักศึกษาปีที่ 3 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยตัวอย่าง</li>
-            <li>ความสนใจ: AI, Web Development, Cybersecurity</li>
-        </ul>
-    </div>
+  <div class="container">
 
-    <div class="section">
-        <h2 class="red">2. ทักษะ (Skills)</h2>
-        <ul>
-            <li>Programming: Python, Java, HTML, CSS, JavaScript</li>
-            <li>AI & Data: TensorFlow, scikit-learn, Power BI, SQL</li>
-            <li>Tools: Git, VS Code, Figma, Google Colab</li>
-            <li>Soft Skills: การสื่อสาร, การทำงานเป็นทีม, การแก้ปัญหา</li>
-        </ul>
-    </div>
+    <section>
+      <h2>1. แนะนำตัว (Profile)</h2>
+      <ul>
+        <li>ชื่อ: นายสมชาย ตัวอย่าง (Somchai Tayang)</li>
+        <li>นักศึกษาปีที่ 3 สาขาวิทยาการคอมพิวเตอร์</li>
+        <li>มหาวิทยาลัยราชภัฏอุดรธานี</li>
+        <li>ความสนใจ: Web Dev, AI, Cybersecurity</li>
+      </ul>
+    </section>
 
-    <div class="section">
-        <h2 class="red">3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
-        <ul>
-            <li>เว็บไซต์จองห้องประชุมออนไลน์ (Web Project)</li>
-            <li>AI ทำนายโรคเบาหวานด้วย Machine Learning (Data Project)</li>
-            <li>Dashboard วิเคราะห์ข้อมูลร้านกาแฟ (Data Visualization)</li>
-        </ul>
-        <p>🔗 <a href="#">ดูโปรเจกต์ทั้งหมดบน GitHub</a></p>
-    </div>
+    <section>
+      <h2>2. ทักษะ (Skills)</h2>
+      <ul>
+        <li>Programming: Python, Java, HTML/CSS, JavaScript</li>
+        <li>AI & Data: TensorFlow, scikit-learn, Power BI, SQL</li>
+        <li>Tools: Git, VS Code, Figma, Google Colab</li>
+      </ul>
+    </section>
 
-    <div class="section">
-        <h2 class="red">4. การศึกษา (Education)</h2>
-        <ul>
-            <li>คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์</li>
-            <li>มหาวิทยาลัยราชภัฏอุดรธานี (2566 - ปัจจุบัน)</li>
-        </ul>
-    </div>
+    <section>
+      <h2>3. ผลงาน (Projects)</h2>
+      <ul>
+        <li>ระบบจองห้องประชุมออนไลน์ (Web App)</li>
+        <li>AI ทำนายโรคเบาหวานด้วย Machine Learning</li>
+        <li>Dashboard วิเคราะห์ข้อมูลร้านกาแฟ</li>
+      </ul>
+      <p>🔗 <a href="#">ดูโปรเจกต์ทั้งหมดบน GitHub</a></p>
+    </section>
 
-    <div class="section">
-        <h2 class="red">5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
-        <ul>
-            <li>ผู้เข้าร่วมอบรม “AI for Beginners by Microsoft”</li>
-            <li>เข้าร่วมแข่งขัน UDRU Hackathon 2025</li>
-            <li>ได้รับรางวัลชนะเลิศโครงงานด้าน IoT</li>
-        </ul>
-    </div>
+    <section>
+      <h2>4. การศึกษา (Education)</h2>
+      <p>คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์<br>
+      มหาวิทยาลัยราชภัฏอุดรธานี (2566–ปัจจุบัน)</p>
+    </section>
 
-    <div class="section contact">
-        <h2 class="red">6. ติดต่อ (Contact)</h2>
-        <ul>
-            <li>Email: <a href="mailto:somchai@example.com">somchai@example.com</a></li>
-            <li>GitHub: <a href="#">github.com/somchai</a></li>
-            <li>LinkedIn: <a href="#">linkedin.com/in/somchai</a></li>
-        </ul>
-    </div>
+    <section>
+      <h2>5. กิจกรรม & รางวัล (Activities & Achievements)</h2>
+      <ul>
+        <li>เข้าร่วมอบรม “AI for Beginners by Microsoft”</li>
+        <li>UDRU Hackathon 2025</li>
+        <li>รางวัลชนะเลิศโครงงานด้าน IoT</li>
+      </ul>
+    </section>
 
-    <div class="section">
-        <h2 class="red">7. องค์ประกอบเสริม (Career Interest)</h2>
-        <p>สนใจพัฒนาตนเองในสายงาน AI Engineer และ Data Scientist</p>
-    </div>
+    <section>
+      <h2>6. ติดต่อ (Contact)</h2>
+      <p>
+        📧 <a href="mailto:somchai@example.com">somchai@example.com</a><br>
+        💻 <a href="#">github.com/somchai</a><br>
+        🔗 <a href="#">linkedin.com/in/somchai</a>
+      </p>
+    </section>
 
-    <footer>
-        © 2025 Somchai Tayang | สร้างด้วย HTML & CSS
-    </footer>
+    <section>
+      <h2>7. เป้าหมายอาชีพ (Career Interest)</h2>
+      <p>มุ่งสู่การเป็น Data Scientist หรือ AI Engineer ในอนาคต</p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 Somchai Tayang — All Rights Reserved
+  </footer>
 
 </body>
 </html>
